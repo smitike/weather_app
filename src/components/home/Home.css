@@ -1,60 +1,85 @@
-/* src/components/home/Home.css */
 .App {
-    text-align: center;
+  text-align: center;
+  display: flex; /* Added for layout */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  flex: 1; /* Added for layout */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-logo:hover {
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  .App-logo:hover {
-    animation: App-logo-spin infinite 20s linear;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .App-link {
-    color: #61dafb;
-  }
-  
-  button {
-    background-color: #61dafb;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  button:hover {
-    background-color: #21a1f1;
-  }
-  
-  input {
-    padding: 10px;
-    border: 2px solid #61dafb;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 16px;
-  }
-  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+button {
+  background-color: #61dafb;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* New styles for the favorites bar */
+.favorites-bar {
+  width: 300px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  max-height: 100vh; /* Set a maximum height */
+  overflow-y: auto; /* Enable scrolling for the contents */
+}
+
+.favorites-bar h2 {
+  margin-top: 0;
+}
+
+.favorites-bar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favorites-bar li {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}

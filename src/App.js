@@ -6,6 +6,8 @@ import Login from './components/auth/login/index';
 import Register from './components/auth/register/index';
 import Home from './components/home/index';
 import Header from './components/header/index';
+import { signOut } from 'firebase/auth';
+import { auth } from './firebase/firebase';
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
 
 function PrivateRoute({ children }) {
   const { currentUser } = useAuth();
+  
   return currentUser ? children : <Navigate to="/login" />;
 }
 
